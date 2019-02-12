@@ -1,42 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Abel");
+$rootColor: #8ab2a7;
+$accentColor: #ffc319;
+$bleed: 0.5em;
+$space: 2em;
+$offwhite: #fafafa;
+$background: url("https://i.pinimg.com/originals/4c/c4/7a/4cc47a5c3c5ad37683fe20d1f45c5017.jpg");
+
 .people {
-    
-    display:flex;
-    flex-direction:row;
+  display: flex;
+  flex-direction: row;
 
-    .person {
-        flex:1;
-        background: #eee;
-        padding: 0 .5em;
+  .person {
+    flex: 1;
+    background: $offwhite;
+    padding: 0 0.5em;
+    font-family: "Abel", sans-serif;
 
-        div {
-            display:flex;
+    div {
+      display: flex;
 
-            span:nth-child(1) {
-                font-weight:bold;
-                margin-right: 1em;
-            }
-            span:nth-child(2) {
-                flex:1;
-            }
-        }
+      span:nth-child(1) {
+        font-weight: bold;
+        margin-right: 1em;
+      }
+      span:nth-child(2) {
+        flex: 1;
+      }
     }
+  }
 
-    ul {
-        list-style-type:none;
-        margin:0;
-        padding:0;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-        li {
-            border: 1px solid blue;
-            cursor: pointer;
-            margin: .25em 0;
-            padding:.5em 0;
-            width: 200px;
+    li {
+      border: 1px solid $rootColor;
+      cursor: pointer;
+      margin: 0.25em 0;
+      padding: 0.5em 0.5em;
+      width: 200px;
+      font-family: "Abel", sans-serif;
 
-            &:hover {
-                background: aliceblue;
-            }
-        }
-
+      &:hover {
+        background: $accentColor;
+      }
     }
+  }
+}
+
+body {
+  background-color: $offwhite;
+  background: $background;
+}
+
+header {
+  background: $background;
+  padding: ($space * 1.5);
+  margin-bottom: ($space * 1.3);
+  text-align: center;
+
+  a {
+    font-size: ($space * 1.2);
+    font-family: "Abel", sans-serif;
+    color: $offwhite;
+    letter-spacing: 0.15em;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  &:after {
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    opacity: 0.5;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    z-index: 1000;
+    position: relative;
+    padding: 2em;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.6em;
+    }
+  }
 }

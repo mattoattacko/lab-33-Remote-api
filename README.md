@@ -7,7 +7,7 @@
 ### Links and Resources
 
 - [repo](https://github.com/mattoattacko/lab-33)
-- [Assignment](https://codesandbox.io/s/km26wqk29v)
+- [Assignment](https://codesandbox.io/s/rz8zxo9rn)
 
 ### Modules
 
