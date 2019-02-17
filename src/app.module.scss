@@ -6,6 +6,18 @@ $space: 2em;
 $offwhite: #fafafa;
 $background: url("https://i.pinimg.com/originals/4c/c4/7a/4cc47a5c3c5ad37683fe20d1f45c5017.jpg");
 
+li {
+  background: #fff;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 2em;
+}
+
 .people {
   display: flex;
   flex-direction: row;

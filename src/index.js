@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-
 import App from "./app.js";
-
 import createStore from "./store/index.js";
+
 const store = createStore();
 
 class Main extends React.Component {

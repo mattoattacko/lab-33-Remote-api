@@ -6,8 +6,9 @@
 
 ### Links and Resources
 
-- [repo](https://github.com/mattoattacko/lab-33)
+- [Repo](https://github.com/mattoattacko/lab-33-Remote-api)
 - [Assignment](https://codesandbox.io/s/rz8zxo9rn)
+- [Front End](https://rz8zxo9rn.codesandbox.io/#)
 
 ### Modules
 
