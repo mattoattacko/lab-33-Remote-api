@@ -12,38 +12,99 @@
 
 ### Modules
 
-#### `modulename.js`
+#### `index.js`
 
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
+###### `CLASS Main`
 
-Usage Notes or examples
+--> App Component
 
-###### `bar(array) -> array`
+- Our application component is wrapped by the store.
+- This allows our entire program to have acess to Redux functionality.
 
-Usage Notes or examples
+#### `app.js`
 
-### Setup
+##### Exported Values and Methods
 
-#### `.env` requirements
+###### `CLASS App`
 
-- `PORT` - Port Number
-- `MONGODB_URI` - URL to the running mongo instance/db
+<-- props is given
 
-#### Running the app
+--> GetPeople Component, PeopleList Component, Modal Component
 
-- `npm start`
-- Endpoint: `/foo/bar/`
-  - Returns a JSON object with abc in it.
-- Endpoint: `/bing/zing/`
-  - Returns a JSON object with xyz in it.
+- Our application class is able to manage each component that makes up the app design.
 
-#### Tests
+###### `mapStateToProps()`
 
-- How do you run tests?
-- What assertions were made?
-- What assertions need to be / should be made?
+<-- store
+
+--> people, person
+
+###### `mapDispatchToProps()`
+
+<-- dispatch, getState
+
+--> get, getPerson
+
+#### `lib/utils.js`
+
+##### Exported Values and Methods
+
+###### `fetchData()`
+
+<-- URL
+
+--> Superagent get request: results.body
+
+#### `components/getPeople.js`
+
+##### Exported Values and Methods
+
+###### `getPeople()`
+
+<-- props
+
+--> header
+
+###### `mapStateToProps()`
+
+<-- store
+
+--> people, person
+
+###### `mapDispatchToProps()`
+
+<-- dispatch, getState
+
+--> get, getPerson
+
+#### `components/peopleList.js`
+
+##### Exported Values and Methods
+
+###### `peopleList()`
+
+<-- props
+
+--> ul: Grabs the names from the StarWars API
+
+###### `mapStateToProps()`
+
+<-- store
+
+--> people, person
+
+###### `mapDispatchToProps()`
+
+<-- dispatch, getState
+
+--> get, getPerson
+
+#### Bugs
+
+- I could not get the initial design of the application to correctly import/utilize the SW API. As such, I switched to another method presneted to me, which seemed to work.
+- Further editing is required to merge the two design ideas.
 
 #### UML
 
